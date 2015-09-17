@@ -7,185 +7,46 @@
     <!--The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
     <meta content="" name="description" />
     <meta content="" name="author" />
-    <title>Trying bootstrap</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <title>Ficus Team Test</title>
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/grid.css" rel="stylesheet" />
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand logo-nav" href="index.html"><img src="http://fillmurray.com/150/90" /></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="index.html">Home<span>Main page</span></a>
-            </li>
-            <li>
-              <a href="about.html">About<span>Who are we?</span></a>
-            </li>
-            <li>
-              <a href="services.html">Services<span>What we do?</span></a>
-            </li>
-            <li>
-              <a href="contacts.html">Contacts<span>How to find us?</span></a>
-            </li>
-          </ul>
-        </div>
-        <!--/.nav-collapse-->
-      </div>
-    </nav>
-    <section class="jumbotron main-section">
-      <div class="container">
+    <header class="container-fluid">
+      <div class="header-in container">
         <div class="row">
-          <div class="col-md-7">
-            <div class="animated fadeInLeft">
-              <h1>
-                Clean Bootstrap
-              </h1>
-              <div class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ratione, ipsum alias eum qui doloribus labore, minima accusantium. Corporis nemo dolores incidunt reiciendis dolorem iste aliquam laboriosam fuga id ex.
-              </div>
-              <a class="btn btn-primary btn-lg" href="#">Learn more</a>
+          <div class="logo col col--lg-2 col--md-2 col--xs-2">
+            <div class="logo--heading">
+              <span class="colored-title">Milli</span>design<span class="description">Разработка лендингов</span>
             </div>
           </div>
-          <div class="col-md-5">
-            <div class="animated fadeInRight">
-              <img src="http://fillmurray.com/450/400" />
-            </div>
+          <nav class="menu col col--lg-4 col--md-4 col--xs-4 column">
+            <li class="menu--item home">
+              <a href="#"><i class="fa fa-home"></i></a>
+            </li>
+            <li class="menu--item">
+              <a href="#">О нас</a>
+            </li>
+            <li class="menu--item">
+              <a href="#">Портфолио</a>
+            </li>
+            <li class="menu--item">
+              <a href="#">Цены</a>
+            </li>
+            <li class="menu--item">
+              <a href="#">Контакты</a>
+            </li>
+          </nav>
+          <div class="contact-phones col col--lg-3 col--md-3 col--xs-3 column">
+            <a class="contact-phones-item tel" href="#">+7(495) 648-68-01</a><a class="contact-phones-item worktime" href="#">0:00 -18:00 ПН - ПТ</a>
+          </div>
+          <div class="contact-button col col--lg-3 col--md-3 col--xs-3 column">
+            <a href="#">Заказать обратный звонок</a>
           </div>
         </div>
       </div>
-    </section>
-    <section class="our-features">
-      <div class="container">
-        <h1>
-          Our features
-        </h1>
-        <div class="row our-features_icons">
-          <div class="col-md-3">
-            <span class="fa-stack fa-lg fa-4x fa-color"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-terminal fa-stack-1x fa-inverse"></i></span>
-            <h3>
-              Valid Code
-            </h3>
-          </div>
-          <div class="col-md-3">
-            <span class="fa-stack fa-lg fa-4x fa-color"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-flag fa-stack-1x fa-inverse"></i></span>
-            <h3>
-              Resposive
-            </h3>
-          </div>
-          <div class="col-md-3">
-            <span class="fa-stack fa-lg fa-4x fa-color"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-video-camera fa-stack-1x fa-inverse"></i></span>
-            <h3>
-              Animation Ready
-            </h3>
-          </div>
-          <div class="col-md-3">
-            <span class="fa-stack fa-lg fa-4x fa-color"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-gear fa-stack-1x fa-inverse"></i></span>
-            <h3>
-              Professional
-            </h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="catch-eye">
-      <div class="container">
-        <div class="row">
-          <h2>
-            Take A Closer look
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni cupiditate similique exercitationem, aliquam? Aspernatur eaque, nemo debitis officiis in libero?
-          </p>
-          <a class="btn btn-lg btn-default" href="about.html">More Info</a>
-        </div>
-      </div>
-    </section>
-    <section class="our-advantages">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2>
-              Business include
-            </h2>
-            <ul class="our-advantages_list">
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> Bootsrap-3
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> Modern-UI
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> CSS3
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> JS
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> Angular
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> Ruby
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <img src="http://fillmurray.com/450/500" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="our-description">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="http://fillmurray.com/450/450" />
-          </div>
-          <div class="col-md-6">
-            <h2>
-              Our Description
-            </h2>
-            <ul class="our-description-list">
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> Bootsrap-3
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> Modern-UI
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> CSS3
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> JS
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> Angular
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-ok"></i> Ruby
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <p>
-        Real Estate &copy; 2015 -<a href="#"> Terms</a><a href="#"> Privacy</a>
-      </p>
-    </footer>
-    <!--/.container--><!--| Bootstrap core JavaScript
-    | \==================================================--><!--Placed at the end of the document so the pages load faster-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
+    </header>
   </body>
 </html>

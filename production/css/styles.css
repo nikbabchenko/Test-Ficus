@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,700&subset=latin,cyrillic);
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: Roboto, Arial, Verdana;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42857143; }
+
+header {
+  background-color: #f9fbfe; }
+  header .header-in.container {
+    height: 70px; }
+  header .logo {
+    height: 70px; }
+
+.logo--heading {
+  text-align: center;
+  font-family: Oswald;
+  font-size: 27px;
+  color: #3b3b3b;
+  text-transform: uppercase;
+  position: relative;
+  top: 50%;
+  transform: translateY(-58%); }
+  .logo--heading span.colored-title {
+    color: #50cbbe; }
+  .logo--heading span.description {
+    font-family: Roboto;
+    display: block;
+    font-size: 10px;
+    line-height: 10px; }
+
+nav {
+  font-size: 12px;
+  font-weight: 300; }
+
+nav.menu > li {
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.menu--item a {
+  display: block;
+  font-weight: 300;
+  color: #3b3b3b;
+  position: relative;
+  padding: 0 11px;
+  line-height: 70px; }
+  .menu--item a:before {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    content: "";
+    display: block;
+    bottom: 0px;
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 2px;
+    background: #59cbfa; }
+  .menu--item a:hover {
+    background: #f5f6f9; }
+    .menu--item a:hover:before {
+      width: 100%; }
+
+.menu--item.home a:hover {
+  background: none; }
+  .menu--item.home a:hover:before {
+    display: none; }
+
+.menu--item.home > a > i {
+  font-size: 18px;
+  color: #46cacb; }
+
+.contact-phones-item {
+  color: #3b3b3b;
+  font-size: 12px;
+  font-weight: 900;
+  position: relative; }
+
+.contact-phones-item.tel {
+  margin-right: 30px; }
+  .contact-phones-item.tel:before {
+    content: "\f095";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    display: block;
+    left: -20px;
+    top: 0;
+    color: #858687; }
+
+.contact-phones-item.worktime:before {
+  content: "\f017";
+  font: normal normal normal 14px/1 FontAwesome;
+  position: absolute;
+  font-size: inherit;
+  text-rendering: auto;
+  left: -20px;
+  top: 0;
+  color: #858687; }
+
+.contact-button {
+  text-align: center; }
+  .contact-button a {
+    padding: 20px 15px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    background-image: -webkit-linear-gradient(top, #34c9e2 0%, #47caca 50%, #5accb1 100%);
+    background-image: linear-gradient(to bottom, #34c9e2 0%, #47caca 50%, #5accb1 100%); }
+
+.column {
+  line-height: 70px; }

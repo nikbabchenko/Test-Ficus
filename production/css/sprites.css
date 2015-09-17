@@ -1,0 +1,52 @@
+.area-chart-color, .area-chart-white, .icon-experience-color, .icon-experience-white, .icon-key-change-color, .icon-key-change-white, .icon-microscope-white, .icon-microscope{
+	background: url(sprites.png) no-repeat;
+}
+
+.area-chart-color{
+	background-position: -18px -23px ;
+	width: 66px;
+	height: 65px;
+}
+
+.area-chart-white{
+	background-position: -16px -120px ;
+	width: 66px;
+	height: 65px;
+}
+
+.icon-experience-color{
+	background-position: -121px -22px ;
+	width: 63px;
+	height: 66px;
+}
+
+.icon-experience-white{
+	background-position: -123px -119px ;
+	width: 63px;
+	height: 66px;
+}
+
+.icon-key-change-color{
+	background-position: -217px -24px ;
+	width: 66px;
+	height: 66px;
+}
+
+.icon-key-change-white{
+	background-position: -223px -121px ;
+	width: 66px;
+	height: 66px;
+}
+
+.icon-microscope-white{
+	background-position: -329px -114px ;
+	width: 50px;
+	height: 69px;
+}
+
+.icon-microscope{
+	background-position: -322px -20px ;
+	width: 50px;
+	height: 69px;
+}
+

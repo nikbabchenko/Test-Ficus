@@ -9,8 +9,9 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     concat = require('gulp-concat');
 
-var sassSources = ['development/css/styles.sass', 'development/css/bootstrap.scss'];
+var sassSources = ['development/css/*.sass'];
 var imageSources = ['development/images/*'];
+var spritesSources = ['development/images/sprites/*'];
 var slimSources = ['development/*.slim']
 
 gulp.task('bower', function() {
@@ -33,7 +34,6 @@ gulp.task('sass', function () {
       includePaths: require('node-bourbon').includePaths
     }))
      .on('error', gutil.log)
-     .pipe(concat('styles.css'))
     .pipe(gulp.dest('production/css'))
     .pipe(connect.reload())
 });
@@ -49,7 +49,7 @@ gulp.task('slim', function(){
 });
 
 gulp.task('imagesMin', function () {
-    return gulp.src('development/images/*')
+    return gulp.src(imageSources)
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
@@ -59,12 +59,24 @@ gulp.task('imagesMin', function () {
         .pipe(connect.reload())
 });
 
-gulp.task('watch', function() {
-  gulp.watch(sassSources, ['sass']);
-  gulp.watch(slimSources, ['slim']);
-  gulp.watch('development/images/*', ['imagesMin']);
+gulp.task('imagesMin-sprites', function () {
+    return gulp.src(spritesSources)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('production/images/sprites'))
+        .pipe(connect.reload())
 });
 
 
-gulp.task('default', ['watch', 'imagesMin', 'sass', 'slim', 'connect']);
+gulp.task('watch', function() {
+  gulp.watch(sassSources, ['sass']);
+  gulp.watch(slimSources, ['slim']);
+  gulp.watch('development/images/*', ['imagesMin'], ['imagesMin-sprites']);
+});
+
+
+gulp.task('default', ['watch', 'imagesMin', 'sass', 'slim', 'connect', 'imagesMin-sprites']);
 
