@@ -1,0 +1,158 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    /! The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta content="" name="description" /
+    meta content="" name="author" /
+    title Trying bootstrap
+    link href="css/bootstrap.css" rel="stylesheet" /
+    link href="css/font-awesome.min.css" rel="stylesheet" /
+    link href="css/styles.css" rel="stylesheet" /
+    link href="css/animate.css" rel="stylesheet" /
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.logo-nav href="index.html"
+            img src="http://fillmurray.com/150/90" /
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a href="index.html"
+                | Home
+                span Main page
+            li
+              a href="about.html"
+                | About
+                span Who are we?
+            li
+              a href="services.html"
+                | Services
+                span What we do?
+            li
+              a href="contacts.html"
+                | Contacts
+                span How to find us?
+        /! /.nav-collapse
+    section.jumbotron.main-section
+      .container
+        .row
+          .col-md-7
+            .animated.fadeInLeft
+              h1 Clean Bootstrap
+              .lead  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ratione, ipsum alias eum qui doloribus labore, minima accusantium. Corporis nemo dolores incidunt reiciendis dolorem iste aliquam laboriosam fuga id ex.
+              a.btn.btn-primary.btn-lg href="#" Learn more
+          .col-md-5
+            .animated.fadeInRight
+              img src="http://fillmurray.com/450/400"
+    section.our-features
+      .container
+        h1 Our features
+        .row.our-features_icons
+          .col-md-3
+            span.fa-stack.fa-lg.fa-4x.fa-color
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-terminal.fa-stack-1x.fa-inverse
+            h3 Valid Code
+          .col-md-3
+            span.fa-stack.fa-lg.fa-4x.fa-color
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-flag.fa-stack-1x.fa-inverse
+            h3 Resposive
+          .col-md-3
+            span.fa-stack.fa-lg.fa-4x.fa-color
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-video-camera.fa-stack-1x.fa-inverse
+            h3 Animation Ready
+          .col-md-3
+            span.fa-stack.fa-lg.fa-4x.fa-color
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-gear.fa-stack-1x.fa-inverse
+            h3 Professional
+
+    section.catch-eye
+      .container
+        .row
+          h2 Take A Closer look
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni cupiditate similique exercitationem, aliquam? Aspernatur eaque, nemo debitis officiis in libero?
+          a.btn.btn-lg.btn-default href="about.html" More Info
+
+    section.our-advantages
+      .container
+        .row
+          .col-md-6
+            h2 Business include
+            ul.our-advantages_list
+              li
+                i.glyphicon.glyphicon-ok
+                |  Bootsrap-3
+              li
+                i.glyphicon.glyphicon-ok
+                |  Modern-UI
+              li
+                i.glyphicon.glyphicon-ok
+                |  CSS3
+              li
+                i.glyphicon.glyphicon-ok
+                |  JS
+              li
+                i.glyphicon.glyphicon-ok
+                |  Angular
+              li
+                i.glyphicon.glyphicon-ok
+                |  Ruby
+          .col-md-6
+            img src="http://fillmurray.com/450/500"
+
+    section.our-description
+      .container
+        .row
+          .col-md-6
+            img src="http://fillmurray.com/450/450"
+          .col-md-6
+            h2 Our Description
+            ul.our-description-list
+              li
+                i.glyphicon.glyphicon-ok
+                |  Bootsrap-3
+              li
+                i.glyphicon.glyphicon-ok
+                |  Modern-UI
+              li
+                i.glyphicon.glyphicon-ok
+                |  CSS3
+              li
+                i.glyphicon.glyphicon-ok
+                |  JS
+              li
+                i.glyphicon.glyphicon-ok
+                |  Angular
+              li
+                i.glyphicon.glyphicon-ok
+                |  Ruby
+    footer
+      p
+        | Real Estate &copy; 2015 -
+        a href="#"  Terms
+        a href="#"  Privacy
+
+    /! /.container
+    /!
+      | Bootstrap core JavaScript
+      | \==================================================
+    /! Placed at the end of the document so the pages load faster
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+    script src="js/wow.js"
+    script src="js/bootstrap.min.js"
+    javascript:
+      new WOW().init();
+
+
