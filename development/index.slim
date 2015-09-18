@@ -12,37 +12,116 @@ html lang="en"
     link href="css/styles.css" rel="stylesheet" /
     link href="css/normalize.css" rel="stylesheet" /
     link href="css/grid.css" rel="stylesheet" /
+    link href="owl-carousel/owl.carousel.css" rel="stylesheet" /
   body
-    header.container-fluid
-      .header-in.container
-        .row
-          .logo.col.col--lg-2.col--md-2.col--xs-2
-            .logo--heading
-              span.colored-title Milli
+    header.header.container-fluid
+      .container
+        / header start
+        .header__wrapper
+          a.logo href="/"
+            .logo__heading
+              span Milli
               | design
-              span.description Разработка лендингов
-          nav.menu.col.col--lg-4.col--md-4.col--xs-4.column
-            li.menu--item.home
-              a href="#"
+            .logo__description Разработка лендингов
+          ul.menu
+            li.menu__item.menu__item--home
+              a.menu__link href="#"
                 i.fa.fa-home
-            li.menu--item
-              a href="#" О нас
-            li.menu--item
-              a href="#" Портфолио
-            li.menu--item
-              a href="#" Цены
-            li.menu--item
-              a href="#" Контакты
-          .contact-phones.col.col--lg-3.col--md-3.col--xs-3.column
-            a.contact-phones-item.tel href="#"
+            li.menu__item
+              a.menu__link href="#" О нас
+            li.menu__item
+              a.menu__link href="#" Портфолио
+            li.menu__item
+              a.menu__link href="#" Цены
+            li.menu__item
+              a.menu__link href="#" Контакты
+          .contacts
+            a.contacts__item.contacts__item--tel href="#"
               |+7(495) 648-68-01
-            a.contact-phones-item.worktime href="#"
+            a.contacts__item.contacts__item--worktime href="#"
               |0:00 -18:00 ПН - ПТ
-          .contact-button.col.col--lg-3.col--md-3.col--xs-3.column
-            a href="#" Заказать обратный звонок
+          a.callback__button href="#" Заказать обратный звонок
+        / header end
+    section.application.container-fluid
+      .container.application__wrapper
+        .application__content
+          .application__item.application__item--development
+            | Разработаем продающий вебсайт
+          .application__item.application__item--promotion
+            | Поднимем Ваш бизнес на новые высоты
+          .application__item.application__item--price
+            span
+              | От 29 000
+              i.fa.fa-rub
+              |  под ключ
+          .application__item.application__item--call-back
+            a href="#"
+             | отправить заявку
+    section.our-features.containter-fluid
+      .container.our-features__content
+          .our-features__heading Почему стоит выбрать нас
+          .our-advantages
+            .our-advantages__item
+              .our-advantages__icon.icon--dna
+                .our-advantages__icon--dna
+              .our-advantages__description
+                | Изучим Вашу нишу на уровне ДНК
+            .our-advantages__item
+              .our-advantages__icon.icon--diagram
+                .our-advantages__icon--diagram
+              .our-advantages__description
+                | Наши лендинги генерируют продажи
+            .our-advantages__item
+              .our-advantages__icon.icon--key
+                .our-advantages__icon--key
+              .our-advantages__description
+                | Сделаем всю работу под ключ
+            .our-advantages__item
+              .our-advantages__icon.icon--specialists
+                .our-advantages__icon--specialists
+              .our-advantages__description
+                | Наши специалисты - гуру своего дела
+    section.container-fluid
+      .row
+        .owl-carousel
+          .owl-carousel__item.owl-carousel__item--resposive-design.item
+            .container.slider-wrapper
+              .slider-content
+                .slider-content__image
+                  img src="images/slider-element.png" height="219" width="510"
+                .slider-description
+                  .slider-description__item.slider-description__item--heading Разработка адаптивного дизайна
+                  .slider-description__item.slider-description__item--text
+                    | Дополнительная информация о разработке, сроки и объяснение механики.
+                  .slider-description__item.slider-description__item--read-more
+                    | Подробнее
+          .owl-carousel__item.owl-carousel__item--support.item
+            .container.slider-wrapper
+              .slider-content
+                .slider-content__image
+                  img src="images/slider-element2.png" height="393" width="393"
+                .slider-description
+                  .slider-description__item.slider-description__item--heading Разработка адаптивного дизайна
+                  .slider-description__item.slider-description__item--text
+                    | Дополнительная информация о разработке, сроки и объяснение механики.
+                  .slider-description__item.slider-description__item--read-more
+                    | Подробнее
+          .owl-carousel__item.owl-carousel__item--present.item
+            .container.slider-wrapper
+              .slider-content
+                .slider-content__image
+                  img src="images/slider-element.png" height="219" width="510"
+                .slider-description
+                  .slider-description__item.slider-description__item--heading Разработка адаптивного дизайна
+                  .slider-description__item.slider-description__item--text
+                    | Дополнительная информация о разработке, сроки и объяснение механики.
+                  .slider-description__item.slider-description__item--read-more
+                    | Подробнее
 
 
-
+script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js" type="text/javascript"
+script src="owl-carousel/owl.carousel.js" type="text/javascript"
+script src="js/main.js" type="text/javascript"
 
 
 
