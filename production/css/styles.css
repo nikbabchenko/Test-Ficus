@@ -341,20 +341,14 @@ section.our-features.containter-fluid {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  box-shadow: 0 0 1px #808080;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in; }
+  box-shadow: 0 0 1px #808080; }
 
 .our-advantages__icon--dna {
   background-image: url("../images/sprites.png");
   background-position: -322px -20px;
   width: 50px;
   height: 69px;
-  margin: 0 auto;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; }
+  margin: 0 auto; }
 
 .our-advantages__icon.icon--dna:hover {
   background-color: #34c9e3;
@@ -368,10 +362,7 @@ section.our-features.containter-fluid {
   background-position: -18px -23px;
   width: 65px;
   height: 66px;
-  margin: 0 auto;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; }
+  margin: 0 auto; }
 
 .our-advantages__icon.icon--diagram:hover {
   background-color: #34c9e3;
@@ -385,10 +376,7 @@ section.our-features.containter-fluid {
   background-position: -217px -24px;
   width: 65px;
   height: 66px;
-  margin: 0 auto;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; }
+  margin: 0 auto; }
 
 .our-advantages__icon.icon--key:hover {
   background-color: #34c9e3;
@@ -402,10 +390,7 @@ section.our-features.containter-fluid {
   background-position: -121px -22px;
   width: 63px;
   height: 66px;
-  margin: 0 auto;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; }
+  margin: 0 auto; }
 
 .our-advantages__icon.icon--specialists:hover {
   background-color: #34c9e3;
@@ -540,4 +525,9 @@ section.our-features.containter-fluid {
 
 .slider-description__item.slider-description__item--read-more {
   font-weight: 900;
-  font-size: 18px; }
+  font-size: 18px;
+  text-transform: uppercase; }
+  .slider-description__item.slider-description__item--read-more i {
+    font-size: 30px;
+    padding-left: 5px;
+    vertical-align: bottom; }

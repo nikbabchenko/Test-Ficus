@@ -7,6 +7,8 @@ $(document).ready(function() {
     addClassActive: true,
     nav: true,
     loop:true,
+    animateOut: 'flipOutY',
+    animateIn: 'fadeIn',
     navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
   });
 });
