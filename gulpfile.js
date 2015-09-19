@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 
 var sassSources = ['development/css/*.sass'];
 var imageSources = ['development/images/*'];
+var isotopeSources = ['development/images/isotope/*'];
 var spritesSources = ['development/images/sprites/*'];
 var slimSources = ['development/*.slim']
 
@@ -70,13 +71,24 @@ gulp.task('imagesMin-sprites', function () {
         .pipe(connect.reload())
 });
 
+gulp.task('imagesMin-isotope', function () {
+    return gulp.src(isotopeSources)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('production/images/isotope'))
+        .pipe(connect.reload())
+});
+
 
 gulp.task('watch', function() {
   gulp.watch(sassSources, ['sass']);
   gulp.watch(slimSources, ['slim']);
-  gulp.watch('development/images/*', ['imagesMin'], ['imagesMin-sprites']);
+  gulp.watch('development/images/*', ['imagesMin'], ['imagesMin-sprites'], ['imagesMin-isotope']);
 });
 
 
-gulp.task('default', ['watch', 'imagesMin', 'sass', 'slim', 'connect', 'imagesMin-sprites']);
+gulp.task('default', ['watch', 'imagesMin', 'sass', 'slim', 'connect', 'imagesMin-sprites', 'imagesMin-isotope']);
 
