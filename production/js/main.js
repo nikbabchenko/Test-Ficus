@@ -20,6 +20,7 @@
   $(".owl-carousel").owlCarousel({
     navigation: true,
     items: 1,
+    smartSpeed:500,
     addClassActive: true,
     nav: true,
     loop:true,
