@@ -27,6 +27,7 @@ body
   +display(flex)
   +justify-content(space-between)
   +align-items(center)
+  padding: 0 13px
 
 
 .logo__heading
@@ -53,20 +54,21 @@ body
   +display(flex)
   +justify-content(space-between)
   +align-items(center)
-
 .menu__item
   list-style-type: none
   display: inline-block
   text-transform: uppercase
   text-decoration: none
 
+
 .menu__link
   display: block
   font-weight: 300
   color: #3b3b3b
-  padding: 0 5px
+  padding: 0 20px
   position: relative
-  line-height: 70px
+  line-height: 60px
+  padding-top: 10px
   &:before
     content: ""
     display: block
@@ -81,7 +83,8 @@ body
     background: #f5f6f9
     &:before
       width: 100%
-
+  &:active
+    color: #4CB5A9
 .menu__item--home
   .menu__link
     &:hover
@@ -92,7 +95,8 @@ body
       font-size: 18px
       color: #46cacb
 
-
+.contacts
+  padding-top: 5px
 .contacts__item
   color: #3b3b3b
   font-size: 12px
@@ -123,6 +127,7 @@ body
 
 
 .callback__button
+  margin-top: 8px
   padding: 14px 15px
   font-size: 14px
   font-weight: 700
@@ -131,7 +136,9 @@ body
   display: block
   white-space: nowrap
   +linear-gradient(top, #34c9e3 0%,#4acbc6 50%,#5cccaf 100%)
-
+  +transition(all .3s)
+  &:hover
+    +linear-gradient(top, #36b9d0 0%,#58b9a0 100%)
 .application
   width: 100%
   min-height: 730px
@@ -144,7 +151,8 @@ body
   +align-items(center)
 
 .application__wrapper
-  width: 900px
+  width: 950px
+
 
 .application__content
   text-align: center
@@ -175,7 +183,9 @@ body
     font-weight: 700
     padding: 18px 22px
     color: #fff
-
+    +transition(all .3s)
+    &:hover
+      +linear-gradient(top, #36b9d0 0%,#58b9a0 100%)
 section.our-features.containter-fluid
   background: #f0f0f2
 
@@ -555,6 +565,7 @@ section.our-features.containter-fluid
   +display(flex)
   +justify-content(space-between)
   +align-items(center)
+  +flex-wrap(wrap)
   padding: 0 55px
 
 
@@ -653,15 +664,20 @@ section.our-features.containter-fluid
   .price-table__heading
     color: #fff
     +linear-gradient(top, #34c9e3 0%, #5cccae 100%)
+
   .price-table__main-number
     font-size: 60px
     line-height: 80px
   .price-table__small-number
     font-size: 36px
   .price-table__btn
-    +linear-gradient(top, #34c9e3 0%, #5cccae 100%)
     border: 0
     color: #fff
+    +linear-gradient(top, #34c9e3 0%, #5cccae 100%)
+    +transition(all .3s)
+    &:hover
+      +linear-gradient(top, #36b9d0 0%,#58b9a0 100%)
+
 .map-container
   position: relative
 .map
@@ -718,7 +734,9 @@ section.our-features.containter-fluid
   text-transform: uppercase
   font-size: 14px
   font-weight: 700
-
+  +transition(all .3s)
+  &:hover
+    +linear-gradient(top, #36b9d0 0%,#58b9a0 100%)
 .map-info__heading
   font-size: 24px
   font-weight: 300
@@ -731,7 +749,196 @@ section.our-features.containter-fluid
   +display(flex)
   +justify-content(space-between)
   +align-items(center)
+  padding: 0 13px
 .footer__copyright
   font-size: 12px
   font-weight: 300
   color: #3b3b3b
+
+.mobile-menu__holder
+  display: none
+  position: absolute
+  width: 200px
+  padding: 0 15px
+  +display(flex)
+  +flex-direction(column)
+  +justify-content(flex-start)
+  +align-items(center)
+  left: 50%
+  margin-left: -165px
+  top: 23px
+  +transition(all .4s)
+.mobile-menu__holder.active
+  height: auto
+  .mobile-menu
+    display: block
+    background-color: rgba(255,255,255,0.95)
+ul.mobile-menu
+  display: none
+  list-style: none
+  margin-top: 7px
+  padding: 0
+  text-align: center
+  +transition(all .4s)
+.mobile-menu__link
+  display: block
+  padding: 15px 0
+  font-size: 20px
+  color: #3b3b3b
+  &:hover
+    color: #60cec3
+  &:active
+    color: #60cec3
+
+a.hamburger-holder
+  display: none
+  width: 40px
+  height: 40px
+  margin: 0 auto
+
+.hamburger-button,
+.hamburger-button:after,
+.hamburger-button:before
+  width: 40px
+  height: 3px
+
+
+.hamburger-button
+  position: relative
+  transform: translateY(15px)
+  transition: all 0ms 300ms
+  background: #50cbbe
+.hamburger-button.animate
+    background: rgba(255,255,255,0)
+
+
+.hamburger-button:before
+  content: ""
+  position: absolute
+  left: 0
+  bottom: 10px
+  background: #50cbbe
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.hamburger-button:after
+  content: ""
+  position: absolute
+  left: 0
+  top: 10px
+  background: #50cbbe
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.hamburger-button.animate:after
+  top: 0
+  transform: rotate(45deg)
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+.hamburger-button.animate:before
+  bottom: 0
+  transform: rotate(-45deg)
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+
+// desktop
+@media screen and (max-width: 1200px)
+  .contacts
+    display: none
+  .slider-content__image
+    display: none
+  .map-info__holder
+    margin-left: 50px
+  .pricie-list__tables
+    padding: 0 0
+
+
+// tablet
+@media screen  and (max-width: 992px)
+  .mobile-menu__holder
+    display: block
+  a.hamburger-holder
+    display: block
+  .menu
+    display: none
+  .price-table
+    width: 220px
+    height: 520px
+  .price-table__body
+    padding: 28px 22px 0px
+  .price-table__services
+    padding: 15px 0 0
+  .price-table__btn-holder
+    padding: 15px 20px 30px
+  .price-table--premium
+    height: 550px
+  .map-info
+    width: 300px
+    height: 280px
+  .form-order__input
+    width: 240px
+    height: 35px
+  .form-order__submit
+    padding: 0 50px
+    line-height: 42px
+  .isotope__item--small
+    width: 50%
+  .isotope__item--big
+    width: 50%
+  .application
+    min-height: 580px
+  .application__item.application__item--development
+    font-size: 24px
+  .application__item.application__item--promotion
+    font-size: 34px
+  .application__item.application__item--price
+    font-size: 40px
+  .application__item.application__item--price span .fa-rub
+    font-size: 36px
+  .price-list__sub-heading
+    max-width: 610px
+    margin: 0 auto
+// mobile
+@media screen and (max-width: 768px)
+  .owl-nav
+    display: none
+  .map-info
+    display: none
+  .pricie-list__tables
+    flex-direction: column
+  .price-table
+    margin-bottom: 20px
+  .callback__button
+    display: none
+  .mobile-menu__holder
+    right: 0
+    margin-left: 20px
+// mobile2
+@media screen and (max-width: 480px)
+  a.callback__button
+    display: none
+  .our-advantages__item
+    margin-bottom: 40px
+  .application__item.application__item--development
+    font-size: 18px
+  .application__item.application__item--promotion
+    font-size: 24px
+  .application__item.application__item--price
+    font-size: 22px
+  .application__item.application__item--price span .fa-rub
+    font-size: 18px
+  .our-features__heading
+    font-size: 26px
+  .slider-description__item.slider-description__item--heading
+    font-size: 24px
+  .slider-description
+    padding: 98px 0 0
+  .our-portfolio__sub-heading
+    padding: 0 20px 20px 20px
+  .footer__copyright
+    font-size: 6px
+
+
+
+

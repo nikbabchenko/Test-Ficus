@@ -26,24 +26,38 @@ html lang="en"
             .logo__description Разработка лендингов
           ul.menu
             li.menu__item.menu__item--home
-              a.menu__link href="#"
+              a.menu__link href="#home"
                 i.fa.fa-home
             li.menu__item
-              a.menu__link href="#" О нас
+              a.menu__link[href="#about"]
+               | О нас
             li.menu__item
-              a.menu__link href="#" Портфолио
+              a.menu__link[href="#portfolio"] Портфолио
             li.menu__item
-              a.menu__link href="#" Цены
+              a.menu__link[href="#price-list"] Цены
             li.menu__item
-              a.menu__link href="#" Контакты
+              a.menu__link[href="#contact"] Контакты
+          .mobile-menu__holder
+            a.hamburger-holder href="#"
+              .hamburger-button
+            ul.mobile-menu
+              li.mobile-menu__item
+                a.mobile-menu__link[href="#about"]
+                 | О нас
+              li.mobile-menu__item
+                a.mobile-menu__link[href="#portfolio"] Портфолио
+              li.mobile-menu__item
+                a.mobile-menu__link[href="#price-list"] Цены
+              li.mobile-menu__item
+                a.mobile-menu__link[href="#contact"] Контакты
           .contacts
-            a.contacts__item.contacts__item--tel href="#"
+            a.contacts__item.contacts__item--tel href="tel:74956486801"
               |+7(495) 648-68-01
-            a.contacts__item.contacts__item--worktime href="#"
+            a.contacts__item.contacts__item--worktime href="#contact"
               |0:00 -18:00 ПН - ПТ
           a.callback__button href="#" Заказать обратный звонок
         / header end
-    section.application.container-fluid
+    section.application.container-fluid[id="home"]
       .container.application__wrapper
         .application__content
           .application__item.application__item--development
@@ -58,7 +72,7 @@ html lang="en"
           .application__item.application__item--call-back
             a href="#"
              | отправить заявку
-    section.our-features.containter-fluid
+    section.our-features.containter-fluid[id="about"]
       .container.our-features__content
           .our-features__heading Почему стоит выбрать нас
           .our-advantages
@@ -124,7 +138,7 @@ html lang="en"
                     a href="#"
                       | Подробнее
                       i.fa.fa-angle-right
-    .section.container-fluid.our-portfolio
+    .section.container-fluid.our-portfolio[id="portfolio"]
      .row
       .our-portfolio__heading
         | Наше портфолио
@@ -196,7 +210,7 @@ html lang="en"
             .isotope__text-overlay--heading Данила Смокинг
             .isotope__text-overlay--sub-heading Дизайн номер 23
     .section.container-fluid
-      .container.price-list
+      .container.price-list[id="price-list"]
         .price-list__heading
           | Цены
         .price-list__sub-heading
@@ -261,7 +275,7 @@ html lang="en"
                     li.price-table__item Настройка вебсайта
             .price-table__btn-holder
               a.price-table__btn href="#" Отправить заявку
-    .section.container-fluid.map-container
+    .section.container-fluid.map-container[id="contact"]
       .row
         .map-cover
         #map_canvas.map
@@ -285,8 +299,10 @@ html lang="en"
 
 
 
-script src="https://maps.googleapis.com/maps/api/js?sensor=false">
+script src="https://maps.googleapis.com/maps/api/js?sensor=false"
 script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js" type="text/javascript"
+script src="js/jquery.scrollTo-1.4.3.1.js"
+script src="http://cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"
 script src="owl-carousel/owl.carousel.js" type="text/javascript"
 script src="js/isotope.min.js" type="text/javascript"
 script src="js/main.js" type="text/javascript"

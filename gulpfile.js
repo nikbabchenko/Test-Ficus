@@ -7,7 +7,9 @@ var gulp = require('gulp'),
     bower = require('gulp-bower'),
     pngquant = require('imagemin-pngquant'),
     connect = require('gulp-connect'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    mozjpeg = require('imagemin-mozjpeg'),
+    image = require('gulp-image');
 
 var sassSources = ['development/css/*.sass'];
 var imageSources = ['development/images/*'];
@@ -51,35 +53,21 @@ gulp.task('slim', function(){
 
 gulp.task('imagesMin', function () {
     return gulp.src(imageSources)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
+        .pipe(image())
         .pipe(gulp.dest('production/images'))
         .pipe(connect.reload())
 });
 
 gulp.task('imagesMin-sprites', function () {
     return gulp.src(spritesSources)
-        .pipe(imagemin({
-            optimizationLevel: 0,
-            arithmetic: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
+        .pipe(image())
         .pipe(gulp.dest('production/images/sprites'))
         .pipe(connect.reload())
 });
 
 gulp.task('imagesMin-isotope', function () {
     return gulp.src(isotopeSources)
-        .pipe(imagemin({
-            arithmetic: true,
-            optimizationLevel: 0,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
+        .pipe(image())
         .pipe(gulp.dest('production/images/isotope'))
         .pipe(connect.reload())
 });

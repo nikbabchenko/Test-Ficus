@@ -1,5 +1,20 @@
 (function() {
   $(function() {
+
+  $('.hamburger-holder').on('click', function() {
+    $('.hamburger-button').toggleClass('animate');
+    $('.mobile-menu__holder').toggleClass('active');
+
+  })
+
+ $('a[href^="#"]').click(function(e) {
+    // Prevent the jump and the #hash from appearing on the address bar
+    e.preventDefault();
+    // Scroll the window, stop any previous animation, stop on user manual scroll
+    // Check https://github.com/flesler/jquery.scrollTo for more customizability
+    $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, offset:-70});
+  });
+
   $(".owl-carousel").owlCarousel({
     navigation: true,
     items: 1,
@@ -28,6 +43,8 @@ $('#map_canvas').on('mouseout', function() {
   });
 
 $(window).on('scroll', function() {
+  $('.header').css('background-color', '#fff');
+  $('.mobile-menu').css('background-color', '#fff');
   return $('.map-cover').show();
 });
 
@@ -53,6 +70,9 @@ if ($('.map').length > 0) {
     });
   })();
 }
+
+
+
 
 
 

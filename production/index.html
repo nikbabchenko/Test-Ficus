@@ -29,29 +29,48 @@
           </a>
           <ul class="menu">
             <li class="menu__item menu__item--home">
-              <a class="menu__link" href="#"><i class="fa fa-home"></i></a>
+              <a class="menu__link" href="#home"><i class="fa fa-home"></i></a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">О нас</a>
+              <a class="menu__link" href="#about">О нас</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Портфолио</a>
+              <a class="menu__link" href="#portfolio">Портфолио</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Цены</a>
+              <a class="menu__link" href="#price-list">Цены</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
+              <a class="menu__link" href="#contact">Контакты</a>
             </li>
           </ul>
+          <div class="mobile-menu__holder">
+            <a class="hamburger-holder" href="#">
+              <div class="hamburger-button"></div>
+            </a>
+            <ul class="mobile-menu">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#about">О нас</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#portfolio">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#price-list">Цены</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#contact">Контакты</a>
+              </li>
+            </ul>
+          </div>
           <div class="contacts">
-            <a class="contacts__item contacts__item--tel" href="#">+7(495) 648-68-01</a><a class="contacts__item contacts__item--worktime" href="#">0:00 -18:00 ПН - ПТ</a>
+            <a class="contacts__item contacts__item--tel" href="tel:74956486801">+7(495) 648-68-01</a><a class="contacts__item contacts__item--worktime" href="#contact">0:00 -18:00 ПН - ПТ</a>
           </div>
           <a class="callback__button" href="#">Заказать обратный звонок</a>
         </div>
       </div>
     </header>
-    <section class="application container-fluid">
+    <section class="application container-fluid" id="home">
       <div class="container application__wrapper">
         <div class="application__content">
           <div class="application__item application__item--development">
@@ -69,7 +88,7 @@
         </div>
       </div>
     </section>
-    <section class="our-features containter-fluid">
+    <section class="our-features containter-fluid" id="about">
       <div class="container our-features__content">
         <div class="our-features__heading">
           Почему стоит выбрать нас
@@ -176,7 +195,7 @@
         </div>
       </div>
     </section>
-    <div class="section container-fluid our-portfolio">
+    <div class="section container-fluid our-portfolio" id="portfolio">
       <div class="row">
         <div class="our-portfolio__heading">
           Наше портфолио
@@ -311,7 +330,7 @@
       </div>
     </div>
     <div class="section container-fluid">
-      <div class="container price-list">
+      <div class="container price-list" id="price-list">
         <div class="price-list__heading">
           Цены
         </div>
@@ -436,7 +455,7 @@
         </div>
       </div>
     </div>
-    <div class="section container-fluid map-container">
+    <div class="section container-fluid map-container" id="contact">
       <div class="row">
         <div class="map-cover"></div>
         <div class="map" id="map_canvas"></div>
@@ -471,10 +490,10 @@
     </footer>
   </body>
 </html>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false">
-  >
-</script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.scrollTo-1.4.3.1.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
 <script src="owl-carousel/owl.carousel.js" type="text/javascript"></script>
 <script src="js/isotope.min.js" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
