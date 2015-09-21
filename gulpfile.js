@@ -63,7 +63,8 @@ gulp.task('imagesMin', function () {
 gulp.task('imagesMin-sprites', function () {
     return gulp.src(spritesSources)
         .pipe(imagemin({
-            progressive: true,
+            optimizationLevel: 0,
+            arithmetic: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
@@ -74,7 +75,8 @@ gulp.task('imagesMin-sprites', function () {
 gulp.task('imagesMin-isotope', function () {
     return gulp.src(isotopeSources)
         .pipe(imagemin({
-            progressive: true,
+            arithmetic: true,
+            optimizationLevel: 0,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
