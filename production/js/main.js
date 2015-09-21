@@ -12,7 +12,9 @@
     e.preventDefault();
     // Scroll the window, stop any previous animation, stop on user manual scroll
     // Check https://github.com/flesler/jquery.scrollTo for more customizability
-    $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, offset:-70});
+    $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, offset:-65});
+
+    return false;
   });
 
   $(".owl-carousel").owlCarousel({
@@ -42,11 +44,48 @@ $('#map_canvas').on('mouseout', function() {
     return $('.map-cover').show();
   });
 
+
+var lastId,
+    topMenu = $(".menu"),
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
 $(window).on('scroll', function() {
   $('.header').css('background-color', '#fff');
   $('.mobile-menu').css('background-color', '#fff');
+// Get container scroll position
+var topMenuHeight=70;
+var fromTop = $(this).scrollTop()+topMenuHeight;
+
+ // Get id of current scroll item
+ var cur = scrollItems.map(function(){
+   if ($(this).offset().top < fromTop)
+     return this;
+ });
+ // Get the id of the current element
+ cur = cur[cur.length-1];
+ var id = cur && cur.length ? cur[0].id : "";
+
+ if (lastId !== id) {
+     lastId = id;
+     // Set/remove active class
+     menuItems
+       .parent().removeClass("active")
+       .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }
   return $('.map-cover').show();
 });
+
+
+
+
+
+
+
 
 if ($('.map').length > 0) {
   return initialize = (function() {

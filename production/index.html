@@ -13,6 +13,7 @@
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link href="css/featherlight.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -66,7 +67,7 @@
           <div class="contacts">
             <a class="contacts__item contacts__item--tel" href="tel:74956486801">+7(495) 648-68-01</a><a class="contacts__item contacts__item--worktime" href="#contact">0:00 -18:00 ПН - ПТ</a>
           </div>
-          <a class="callback__button" href="#">Заказать обратный звонок</a>
+          <a class="callback__button" data-featherlight="#pop-up-callback" href="/index.html">Заказать обратный звонок</a>
         </div>
       </div>
     </header>
@@ -83,7 +84,7 @@
             <span>От 29 000<i class="fa fa-rub"></i> под ключ</span>
           </div>
           <div class="application__item application__item--call-back">
-            <a href="#">отправить заявку</a>
+            <a href="#contact">отправить заявку</a>
           </div>
         </div>
       </div>
@@ -453,9 +454,10 @@
             </div>
           </div>
         </div>
+        <div class="contact-anchor" id="contact"></div>
       </div>
     </div>
-    <div class="section container-fluid map-container" id="contact">
+    <div class="section container-fluid map-container">
       <div class="row">
         <div class="map-cover"></div>
         <div class="map" id="map_canvas"></div>
@@ -489,6 +491,14 @@
       </div>
     </footer>
   </body>
+  <div class="pop-up" id="pop-up-callback">
+    <form class="form-call-back">
+      <div class="form-call-back__heading">
+        Заказать звонок
+      </div>
+      <input class="form-call-back__input" placeholder="ФИО" type="text" /><input class="form-call-back__input" placeholder="Телефон" type="tel" /><textarea class="form-call-back__textarea" placeholder="Сообщение" type="tel"></textarea><input class="form-call-back__submit" type="submit" value="Отправить заявку" />
+    </form>
+  </div>
 </html>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js" type="text/javascript"></script>
@@ -496,4 +506,5 @@
 <script src="http://cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
 <script src="owl-carousel/owl.carousel.js" type="text/javascript"></script>
 <script src="js/isotope.min.js" type="text/javascript"></script>
+<script src="js/featherlight.js" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
