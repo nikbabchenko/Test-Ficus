@@ -100,12 +100,12 @@ if ($('.map').length > 0) {
 
     };
     map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-    image = new google.maps.MarkerImage('/location-contacts.png', new google.maps.Size(50, 67), new google.maps.Point(0, 0), new google.maps.Point(25, 82));
+    image = new google.maps.MarkerImage('../images/location-contacts.png', new google.maps.Size(77, 108), new google.maps.Point(0, 0), new google.maps.Point(25, 82));
     return marker = new google.maps.Marker({
       position: MarkerLatlng,
       map: map,
       icon: image,
-      title: 'Гагаринское плато, 5а'
+      title: 'We are here'
     });
   })();
 }
